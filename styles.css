@@ -1,0 +1,185 @@
+/* General Body */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #2f4f4f; /* Dark slate gray for text */
+    overflow-x: hidden;
+    height: 100%; /* Ensure the body takes full height for sticky behavior */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+    background-color: #4CAF50; /* Lush green */
+    position: -webkit-sticky; /* For Safari compatibility */
+    position: sticky; /* Ensure sticky positioning */
+    top: 0; /* Keep it at the top */
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.3); /* Soft green shadow */
+    border-radius: 25px; /* Rounded corners */
+    background-attachment: fixed; /* Ensures it stays on top during scroll */
+}
+
+/* Navbar links */
+.navbar a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    padding: 12px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.navbar a:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+    color: #f5f5dc; /* Light cream color */
+    box-shadow: 0 0 15px #fff;
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
+/* Section Styles */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0, 128, 0, 0.2); /* Greenish shadow */
+    opacity: 0;
+    transform: translateY(50px); /* Elements come from below */
+    transition: opacity 0.6s, transform 0.6s ease-out;
+    background-image: linear-gradient(145deg, #d2b48c, #f0e68c); /* Gradient background */
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to normal position */
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid #4CAF50; /* Border matches the navbar */
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 128, 0, 0.4); /* Glow effect */
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* More pronounced floating */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Buttons for carousel */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(76, 175, 80, 0.8); /* Transparent green background */
+    border: none;
+    color: white;
+    font-size: 25px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #66cdaa; /* Lighter green on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Title and text color */
+h1, h2 {
+    color: #2f4f4f; /* Dark slate gray for text */
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+p {
+    color: #3e3e3e;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+/* Floating Effects for Sections */
+@keyframes floatSection {
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.section {
+    animation: floatSection 6s ease-in-out infinite;
+}
+
+h2.kegiatan {
+    margin-bottom: 30px; /* Adjust this value as needed */
+}
+.carousel {
+    margin-top: 30px; /* Adjust this value as needed */
+}
+
+
+
+
+
+
+
+
